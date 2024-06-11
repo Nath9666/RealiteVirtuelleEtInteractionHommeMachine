@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class ObjectMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject menuContainer;
     [SerializeField] private GameObject menuCanvas;
     [SerializeField] private GameObject weaponsCanvas;
 
     private bool menuActive = false;
 
-    void Start()
-    {
-        menuCanvas.SetActive(false);
-        weaponsCanvas.SetActive(false);
-    }
+    // void Start()
+    // {
+    //     menuCanvas.SetActive(false);
+    //     weaponsCanvas.SetActive(false);
+    // }
 
     void Update()
     {
@@ -33,15 +34,17 @@ public class ObjectMenu : MonoBehaviour
 
     void OpenMainMenu()
     {
-        menuCanvas.SetActive(true);
-        weaponsCanvas.SetActive(false);
+        menuContainer.SetActive(true);
+        // menuCanvas.SetActive(true);
+        // weaponsCanvas.SetActive(false);
         menuActive = true;
     }
 
     void CloseAllMenus()
     {
-        menuCanvas.SetActive(false);
-        weaponsCanvas.SetActive(false);
+        menuContainer.SetActive(false);
+        // menuCanvas.SetActive(false);
+        // weaponsCanvas.SetActive(false);
         menuActive = false;
     }
 }
