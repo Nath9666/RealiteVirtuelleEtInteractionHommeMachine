@@ -32,12 +32,18 @@ public class WeaponsMenu : MonoBehaviour
 
     private void DisplayWeaponsInformation()
     {
-        // Vérifier si objectStorage est null pour éviter les erreurs
         if (objectStorage != null)
         {
             foreach (GameObject obj in objectStorage.weaponsInStorage)
             {
-                weaponNameInputOne.text = obj.name;
+                if(weaponNameInputOne.text != "")
+                {
+                    weaponNameInputTwo.text = obj.name;
+                } 
+                else 
+                {
+                    weaponNameInputOne.text = obj.name;
+                }
             }
         }
         else

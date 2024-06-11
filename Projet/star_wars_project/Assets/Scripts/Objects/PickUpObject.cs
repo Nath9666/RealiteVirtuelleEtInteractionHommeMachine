@@ -22,7 +22,6 @@ public class PickUpObject : MonoBehaviour
                 {
                     weaponsStorage.AddObjectToStorage(hit.collider.gameObject);
                     DisplayObjectName(hit.collider.gameObject.name);
-                    DisplayWeaponsStorage();
                     hit.collider.gameObject.SetActive(false);
                 }
             }
