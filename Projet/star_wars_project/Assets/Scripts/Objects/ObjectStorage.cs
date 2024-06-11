@@ -5,36 +5,40 @@ using TMPro;
 
 public class ObjectStorage : MonoBehaviour
 {
-    public List<GameObject> weaponsInStorage = new List<GameObject>();
+    public List<Weapons> weaponsInStorage = new List<Weapons>();
     [SerializeField] private GameObject menuContainter;
     [SerializeField] private GameObject weaponsMenu;
 
     [SerializeField] private TMP_Text weaponNameInputOne;
     [SerializeField] private TMP_Text weaponNameInputTwo;
+    [SerializeField] private TMP_Text weaponNameInputThree;
 
-    public void AddObjectToStorage(GameObject objet)
+    public void AddObjectToStorage(Weapons objet)
     {
-        if(weaponsInStorage.Count < 2)
+        if (weaponsInStorage.Count < 2)
         {
             weaponsInStorage.Add(objet);
         }
-        else 
+        else
         {
+            weaponsInStorage.Add(objet);
             menuContainter.SetActive(true);
             weaponsMenu.SetActive(true);
-            foreach (GameObject obj in weaponsInStorage)
-            {
-                if(weaponNameInputOne.text != "")
-                {
-                    weaponNameInputTwo.text = obj.name;
-                } 
-                else 
-                {
-                    weaponNameInputOne.text = obj.name;
-                }
-            }
+
+            // Réinitialiser les textes
+            weaponNameInputOne.text = "";
+            weaponNameInputTwo.text = "";
+            weaponNameInputThree.text = "";
+
+            // Afficher les noms des armes
+            if (weaponsInStorage.Count > 0)
+                weaponNameInputOne.text = weaponsInStorage[0].weaponName;
+            if (weaponsInStorage.Count > 1)
+                weaponNameInputTwo.text = weaponsInStorage[1].weaponName;
+            if (weaponsInStorage.Count > 2)
+                weaponNameInputThree.text = weaponsInStorage[2].weaponName;
+
             Debug.Log("Le sac est plein");
         }
-        
     }
 }

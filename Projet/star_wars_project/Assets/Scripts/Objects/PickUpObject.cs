@@ -20,7 +20,7 @@ public class PickUpObject : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    weaponsStorage.AddObjectToStorage(hit.collider.gameObject);
+                    weaponsStorage.AddObjectToStorage(hit.collider.gameObject.GetComponent<Weapons>());
                     DisplayObjectName(hit.collider.gameObject.name);
                     hit.collider.gameObject.SetActive(false);
                 }

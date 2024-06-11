@@ -34,16 +34,22 @@ public class WeaponsMenu : MonoBehaviour
     {
         if (objectStorage != null)
         {
-            foreach (GameObject obj in objectStorage.weaponsInStorage)
+            // Effacer le texte avant d'afficher les nouvelles informations
+            weaponNameInputOne.text = "";
+            weaponNameInputTwo.text = "";
+
+            int count = 0;
+            foreach (Weapons obj in objectStorage.weaponsInStorage)
             {
-                if(weaponNameInputOne.text != "")
+                if (count == 0)
                 {
-                    weaponNameInputTwo.text = obj.name;
-                } 
-                else 
-                {
-                    weaponNameInputOne.text = obj.name;
+                    weaponNameInputOne.text = obj.weaponName;
                 }
+                else if (count == 1)
+                {
+                    weaponNameInputTwo.text = obj.weaponName;
+                }
+                count++;
             }
         }
         else
