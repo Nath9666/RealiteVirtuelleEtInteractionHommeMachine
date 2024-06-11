@@ -11,14 +11,14 @@ public class ObjectMenu : MonoBehaviour
 
     private bool menuActive = false;
 
-    // void Start()
-    // {
-    //     menuCanvas.SetActive(false);
-    //     weaponsCanvas.SetActive(false);
-    // }
+    void Start()
+    {
+        menuContainer.SetActive(false);
+    }
 
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!menuActive)
@@ -35,16 +35,16 @@ public class ObjectMenu : MonoBehaviour
     void OpenMainMenu()
     {
         menuContainer.SetActive(true);
-        // menuCanvas.SetActive(true);
-        // weaponsCanvas.SetActive(false);
+        menuCanvas.SetActive(true);
+        weaponsCanvas.SetActive(false);
         menuActive = true;
     }
 
     void CloseAllMenus()
     {
         menuContainer.SetActive(false);
-        // menuCanvas.SetActive(false);
-        // weaponsCanvas.SetActive(false);
+        menuCanvas.SetActive(false);
+        weaponsCanvas.SetActive(false);
         menuActive = false;
     }
 }
