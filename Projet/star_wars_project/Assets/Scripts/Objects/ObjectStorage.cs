@@ -10,5 +10,4 @@ public class ObjectStorage : MonoBehaviour
     {
         weaponsInStorage.Add(objet);
     }
-
 }

@@ -14,20 +14,17 @@ public class PickUpObject : MonoBehaviour
 
         RaycastHit hit;
         Debug.DrawRay(rayOrigin, rayDirection * 3, Color.red);
-        if(Physics.Raycast(rayOrigin, rayDirection, out hit, 3))
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, 3))
         {
-            if(hit.collider.gameObject.tag == "PickUpObject")
+            if (hit.collider.gameObject.tag == "PickUpObject")
             {
-                if(Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0))
                 {
-                    Debug.Log(hit.collider.gameObject.name);
-
                     weaponsStorage.AddObjectToStorage(hit.collider.gameObject);
                     DisplayObjectName(hit.collider.gameObject.name);
-
-                    Destroy(hit.collider.gameObject);
+                    DisplayWeaponsStorage();
+                    hit.collider.gameObject.SetActive(false);
                 }
-                
             }
         }
     }
@@ -45,10 +42,10 @@ public class PickUpObject : MonoBehaviour
         RectTransform panelRect = panelGO.AddComponent<RectTransform>();
         panelRect.sizeDelta = new Vector2(300, 50);
 
-        panelRect.anchorMin = new Vector2(0.5f, 0); 
+        panelRect.anchorMin = new Vector2(0.5f, 0);
         panelRect.anchorMax = new Vector2(0.5f, 0);
         panelRect.pivot = new Vector2(0.5f, 0);
-        panelRect.anchoredPosition = new Vector2(0, 50); 
+        panelRect.anchoredPosition = new Vector2(0, 50);
 
         Image panelImage = panelGO.AddComponent<Image>();
         panelImage.color = Color.white;
@@ -67,7 +64,7 @@ public class PickUpObject : MonoBehaviour
         text.alignment = TextAnchor.MiddleCenter;
 
         Destroy(canvasGO, 2f);
-
     }
+
 
 }
