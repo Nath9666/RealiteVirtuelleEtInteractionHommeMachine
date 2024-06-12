@@ -10,14 +10,18 @@ public class ObjectMenu : MonoBehaviour
     [SerializeField] private GameObject weaponsCanvas;
 
     private bool menuActive = false;
+    private PlayerController playerController;
+
 
     void Start()
     {
+        playerController = FindObjectOfType<PlayerController>();
         menuContainer.SetActive(false);
     }
 
     void Update()
-    {
+    {   
+
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -34,6 +38,7 @@ public class ObjectMenu : MonoBehaviour
 
     void OpenMainMenu()
     {
+        playerController.isCameraLock = true;
         menuContainer.SetActive(true);
         menuCanvas.SetActive(true);
         weaponsCanvas.SetActive(false);
@@ -42,6 +47,7 @@ public class ObjectMenu : MonoBehaviour
 
     void CloseAllMenus()
     {
+        playerController.isCameraLock = false;
         menuContainer.SetActive(false);
         menuCanvas.SetActive(false);
         weaponsCanvas.SetActive(false);

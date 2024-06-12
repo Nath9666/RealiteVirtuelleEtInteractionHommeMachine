@@ -43,7 +43,7 @@ public class PickUpObject : MonoBehaviour
         }
     }
 
-public void DisplayObjectName(Weapons weapon)
+    public void DisplayObjectName(Weapons weapon)
     {
         canvasObject.SetActive(true);
         objectDisplayer.text = weapon.weaponName;

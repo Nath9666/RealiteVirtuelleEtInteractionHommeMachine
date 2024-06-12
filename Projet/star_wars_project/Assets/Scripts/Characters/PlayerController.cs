@@ -15,6 +15,13 @@ public class PlayerController : MonoBehaviour
     private bool jumpPerformed;
     private CharacterController characterController;
 
+    public bool isCameraLock;
+
+    void Start()
+    {
+        isCameraLock = false;
+    }
+
     public void Awake()
     {
         characterController = GetComponent<CharacterController>(); 
@@ -27,31 +34,36 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 _horizontalVelocity = speed * new Vector3(moveInput.x, 0, moveInput.y);
-        float _gravityVelocity = Gravity(velocity.y);
+        if(!isCameraLock)
+        {
+            Vector3 _horizontalVelocity = speed * new Vector3(moveInput.x, 0, moveInput.y);
+            float _gravityVelocity = Gravity(velocity.y);
 
-        velocity = _horizontalVelocity + _gravityVelocity * Vector3.up;
+            velocity = _horizontalVelocity + _gravityVelocity * Vector3.up;
 
-        TryJump();
+            TryJump();
 
-        Vector3 motion = transform.right * velocity.x + transform.up * velocity.y + transform.forward * velocity.z;
-        characterController.Move(motion * Time.deltaTime);
+            Vector3 motion = transform.right * velocity.x + transform.up * velocity.y + transform.forward * velocity.z;
+            characterController.Move(motion * Time.deltaTime);
+        }
     }
 
     private void Look()
     {
-        //Rotation horizontale
-        transform.Rotate(lookInput.x * mouseSensitivity.x * Time.deltaTime * Vector3.up);
+        if(!isCameraLock)
+        {
+            //Rotation horizontale
+            transform.Rotate(lookInput.x * mouseSensitivity.x * Time.deltaTime * Vector3.up);
 
-        //Rotation verticale
-        float _eyesAngleX = eyes.localEulerAngles.x - lookInput.y * Time.deltaTime * mouseSensitivity.y;
+            //Rotation verticale
+            float _eyesAngleX = eyes.localEulerAngles.x - lookInput.y * Time.deltaTime * mouseSensitivity.y;
 
-        //on clamp pour bloquer la vision et empecher de bouger dans tous les sens
-        if(_eyesAngleX <= 90f) _eyesAngleX = _eyesAngleX > 0 ? Mathf.Clamp(_eyesAngleX, 0f, 89.9f) : _eyesAngleX;
-        if(_eyesAngleX > 270f) _eyesAngleX = Mathf.Clamp(_eyesAngleX, 271f, 360f);
+            //on clamp pour bloquer la vision et empecher de bouger dans tous les sens
+            if(_eyesAngleX <= 90f) _eyesAngleX = _eyesAngleX > 0 ? Mathf.Clamp(_eyesAngleX, 0f, 89.9f) : _eyesAngleX;
+            if(_eyesAngleX > 270f) _eyesAngleX = Mathf.Clamp(_eyesAngleX, 271f, 360f);
 
-        eyes.localEulerAngles = Vector3.right * _eyesAngleX;
-
+            eyes.localEulerAngles = Vector3.right * _eyesAngleX;
+        }
     }
 
     private float Gravity(float _verticalVelocity)
