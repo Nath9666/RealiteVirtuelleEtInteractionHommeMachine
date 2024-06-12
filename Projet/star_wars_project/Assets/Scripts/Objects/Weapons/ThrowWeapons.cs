@@ -11,12 +11,13 @@ public class ThrowWeapons : MonoBehaviour
     [SerializeField] private GameObject menuContainer;
 
     private ObjectStorage objectStorage;
+    private PlayerPosition playerPosition;
 
     void Start()
     {
         objectStorage = FindObjectOfType<ObjectStorage>();
+        playerPosition = FindObjectOfType<PlayerPosition>();
         throwWeaponButton.onClick.AddListener(DropWeapon);
-
     }
 
     public void DropWeapon()
@@ -24,11 +25,13 @@ public class ThrowWeapons : MonoBehaviour
         if(objectStorage != null)
         {
             Weapons weaponToRemove = null;
+            Debug.Log(weaponNameInput.text);
             foreach(Weapons weapon in objectStorage.weaponsInStorage)
             {
                 if(weapon.weaponName == weaponNameInput.text)
                 {
                     weaponToRemove = weapon;
+                    Debug.Log(weaponToRemove.weaponName);
                     break;
                 }
             }
@@ -38,6 +41,10 @@ public class ThrowWeapons : MonoBehaviour
                 objectStorage.weaponsInStorage.Remove(weaponToRemove);
                 menuContainer.SetActive(false);
                 weaponSelectorCanvas.SetActive(false);
+
+                Vector3 playerPos = playerPosition.GetPlayerPosition();
+                Debug.Log(playerPos);
+
                 Debug.Log(weaponToRemove.weaponName + " a bien ete retire");
             }
 
