@@ -20,13 +20,15 @@ public class ThrowWeapons : MonoBehaviour
     private PlayerPosition playerPosition;
     private Dictionary<string, GameObject> weaponDictionary;
 
+    private PlayerController playerController;
 
     void Start()
     {
         objectStorage = FindObjectOfType<ObjectStorage>();
         playerPosition = FindObjectOfType<PlayerPosition>();
         throwWeaponButton.onClick.AddListener(DropWeapon);
-    
+        playerController = FindObjectOfType<PlayerController>();
+
         weaponDictionary = new Dictionary<string, GameObject>
         {
             { "Sabre Laser", sabreLazer },
@@ -59,12 +61,12 @@ public class ThrowWeapons : MonoBehaviour
                     weaponPrefab.SetActive(true);
                 }
 
-
-
-
                 objectStorage.weaponsInStorage.Remove(weaponToRemove);
                 menuContainer.SetActive(false);
                 weaponSelectorCanvas.SetActive(false);
+                playerController.isCameraLock = false;
+                objectStorage.isWeaponSelectorOpen = false;
+                Debug.Log(objectStorage.isWeaponSelectorOpen);
 
                 Debug.Log(weaponToRemove.weaponName + " a bien ete retire");
             }

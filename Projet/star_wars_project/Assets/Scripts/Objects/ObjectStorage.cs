@@ -13,6 +13,16 @@ public class ObjectStorage : MonoBehaviour
     [SerializeField] private TMP_Text weaponNameInputTwo;
     [SerializeField] private TMP_Text weaponNameInputThree;
 
+    private PlayerController playerController;
+    public bool isWeaponSelectorOpen = false;
+
+
+    void Start()
+    {
+        playerController = FindObjectOfType<PlayerController>();
+    }
+
+
     public void AddObjectToStorage(Weapons objet)
     {
         if (weaponsInStorage.Count < 2)
@@ -21,6 +31,9 @@ public class ObjectStorage : MonoBehaviour
         }
         else
         {
+            playerController.isCameraLock = true;
+            isWeaponSelectorOpen =  true;
+            Debug.Log(isWeaponSelectorOpen);
             weaponsInStorage.Add(objet);
             menuContainter.SetActive(true);
             weaponsMenu.SetActive(true);

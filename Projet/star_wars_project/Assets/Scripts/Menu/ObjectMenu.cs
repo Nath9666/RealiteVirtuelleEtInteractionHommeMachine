@@ -11,19 +11,19 @@ public class ObjectMenu : MonoBehaviour
 
     private bool menuActive = false;
     private PlayerController playerController;
+    private ObjectStorage objectStorage;
 
 
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
+        objectStorage = FindObjectOfType<ObjectStorage>();
         menuContainer.SetActive(false);
     }
 
     void Update()
     {   
-
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !objectStorage.isWeaponSelectorOpen)
         {
             if (!menuActive)
             {
