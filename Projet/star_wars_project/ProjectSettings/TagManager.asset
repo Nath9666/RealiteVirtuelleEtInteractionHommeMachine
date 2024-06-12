@@ -8,6 +8,7 @@ TagManager:
   - PickUpObject
   - Menu
   - CanvasPNJ
+  - DisplayerObject
   layers:
   - Default
   - TransparentFX

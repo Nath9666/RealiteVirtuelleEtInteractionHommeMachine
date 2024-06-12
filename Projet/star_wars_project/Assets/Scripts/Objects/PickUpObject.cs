@@ -2,10 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PickUpObject : MonoBehaviour
 {
+    [SerializeField] private TMP_Text objectDisplayer;
+    [SerializeField] private GameObject canvasObject;
     public ObjectStorage weaponsStorage;
+    private float displayTime = 2f; // Temps d'affichage du canvas en secondes
+
+
+    void Start()
+    {
+        canvasObject.SetActive(false);
+    }
+
 
     void Update()
     {
@@ -20,50 +31,28 @@ public class PickUpObject : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    weaponsStorage.AddObjectToStorage(hit.collider.gameObject.GetComponent<Weapons>());
-                    DisplayObjectName(hit.collider.gameObject.name);
-                    hit.collider.gameObject.SetActive(false);
+                    Weapons weapon = hit.collider.gameObject.GetComponent<Weapons>();
+                    if (weapon != null)
+                    {
+                        weaponsStorage.AddObjectToStorage(weapon);
+                        DisplayObjectName(weapon);
+                        hit.collider.gameObject.SetActive(false);
+                    }
                 }
             }
         }
     }
 
-    public void DisplayObjectName(string ObjectName)
+public void DisplayObjectName(Weapons weapon)
     {
-        GameObject canvasGO = new GameObject("Canvas");
-        Canvas canvas = canvasGO.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvasGO.AddComponent<CanvasScaler>();
-        canvasGO.AddComponent<GraphicRaycaster>();
-
-        GameObject panelGO = new GameObject("Panel");
-        panelGO.transform.SetParent(canvasGO.transform);
-        RectTransform panelRect = panelGO.AddComponent<RectTransform>();
-        panelRect.sizeDelta = new Vector2(300, 50);
-
-        panelRect.anchorMin = new Vector2(0.5f, 0);
-        panelRect.anchorMax = new Vector2(0.5f, 0);
-        panelRect.pivot = new Vector2(0.5f, 0);
-        panelRect.anchoredPosition = new Vector2(0, 50);
-
-        Image panelImage = panelGO.AddComponent<Image>();
-        panelImage.color = Color.white;
-
-        GameObject textGO = new GameObject("Text");
-        textGO.transform.SetParent(panelGO.transform);
-        RectTransform textRect = textGO.AddComponent<RectTransform>();
-        textRect.sizeDelta = new Vector2(500, 300);
-        textRect.anchoredPosition = Vector2.zero;
-
-        Text text = textGO.AddComponent<Text>();
-        text.text = ObjectName;
-        text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-        text.fontSize = 24;
-        text.color = Color.black;
-        text.alignment = TextAnchor.MiddleCenter;
-
-        Destroy(canvasGO, 2f);
+        canvasObject.SetActive(true);
+        objectDisplayer.text = weapon.weaponName;
+        StartCoroutine(HideCanvasAfterDelay(displayTime)); // Cache le canvas après displayTime secondes
     }
 
-
+    private IEnumerator HideCanvasAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        canvasObject.SetActive(false);
+    }
 }
