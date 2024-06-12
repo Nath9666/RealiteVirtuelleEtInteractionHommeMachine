@@ -25,25 +25,24 @@ public class ThrowWeapons : MonoBehaviour
         if(objectStorage != null)
         {
             Weapons weaponToRemove = null;
-            Debug.Log(weaponNameInput.text);
+
             foreach(Weapons weapon in objectStorage.weaponsInStorage)
             {
                 if(weapon.weaponName == weaponNameInput.text)
                 {
                     weaponToRemove = weapon;
-                    Debug.Log(weaponToRemove.weaponName);
                     break;
                 }
             }
 
             if(weaponToRemove != null)
             {
+                Vector3 weaponPos = playerPosition.PositionDroppedWeapon();
+                Instantiate(weaponToRemove, weaponPos, Quaternion.identity);
+
                 objectStorage.weaponsInStorage.Remove(weaponToRemove);
                 menuContainer.SetActive(false);
                 weaponSelectorCanvas.SetActive(false);
-
-                Vector3 playerPos = playerPosition.GetPlayerPosition();
-                Debug.Log(playerPos);
 
                 Debug.Log(weaponToRemove.weaponName + " a bien ete retire");
             }
