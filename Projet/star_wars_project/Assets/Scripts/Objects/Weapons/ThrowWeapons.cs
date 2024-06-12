@@ -38,7 +38,7 @@ public class ThrowWeapons : MonoBehaviour
                 objectStorage.weaponsInStorage.Remove(weaponToRemove);
                 menuContainer.SetActive(false);
                 weaponSelectorCanvas.SetActive(false);
-                Debug.Log("L'arme a bien ete retire");
+                Debug.Log(weaponToRemove.weaponName + " a bien ete retire");
             }
 
         }

@@ -25,12 +25,10 @@ public class ObjectStorage : MonoBehaviour
             menuContainter.SetActive(true);
             weaponsMenu.SetActive(true);
 
-            // Réinitialiser les textes
             weaponNameInputOne.text = "";
             weaponNameInputTwo.text = "";
             weaponNameInputThree.text = "";
 
-            // Afficher les noms des armes
             if (weaponsInStorage.Count > 0)
                 weaponNameInputOne.text = weaponsInStorage[0].weaponName;
             if (weaponsInStorage.Count > 1)
