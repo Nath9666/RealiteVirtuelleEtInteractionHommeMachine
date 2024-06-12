@@ -10,15 +10,29 @@ public class ThrowWeapons : MonoBehaviour
     [SerializeField] private GameObject weaponSelectorCanvas;
     [SerializeField] private GameObject menuContainer;
 
+
+    //si on ajoute de nouvelles armes il faudra les ajouter ici 
+    [SerializeField] private GameObject sabreLazer;
+    [SerializeField] private GameObject blaster;
+    [SerializeField] private GameObject arbalete;
+
     private ObjectStorage objectStorage;
     private PlayerPosition playerPosition;
-    private GameObject weaponObject = null;
+    private Dictionary<string, GameObject> weaponDictionary;
+
 
     void Start()
     {
         objectStorage = FindObjectOfType<ObjectStorage>();
         playerPosition = FindObjectOfType<PlayerPosition>();
         throwWeaponButton.onClick.AddListener(DropWeapon);
+    
+        weaponDictionary = new Dictionary<string, GameObject>
+        {
+            { "Sabre Laser", sabreLazer },
+            { "Blaster", blaster },
+            { "Arbalete", arbalete }
+        };        
     }
 
     public void DropWeapon()
@@ -32,8 +46,6 @@ public class ThrowWeapons : MonoBehaviour
                 if(weapon.weaponName == weaponNameInput.text)
                 {
                     weaponToRemove = weapon;
-                    weaponObject.SetActive(true);
-                    weaponObject = GameObject.Find(weaponToRemove.weaponName);
                     break;
                 }
             }
@@ -41,8 +53,15 @@ public class ThrowWeapons : MonoBehaviour
             if(weaponToRemove != null)
             {
                 Vector3 weaponPos = playerPosition.PositionDroppedWeapon();
-                Instantiate(weaponToRemove, weaponPos, Quaternion.identity);
-                weaponObject.SetActive(false);
+                if (weaponDictionary.TryGetValue(weaponToRemove.weaponName, out GameObject weaponPrefab))
+                {
+                    weaponPrefab.transform.position = weaponPos;
+                    weaponPrefab.SetActive(true);
+                }
+
+
+
+
                 objectStorage.weaponsInStorage.Remove(weaponToRemove);
                 menuContainer.SetActive(false);
                 weaponSelectorCanvas.SetActive(false);
