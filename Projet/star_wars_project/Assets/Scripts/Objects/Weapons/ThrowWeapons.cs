@@ -12,6 +12,7 @@ public class ThrowWeapons : MonoBehaviour
 
     private ObjectStorage objectStorage;
     private PlayerPosition playerPosition;
+    private GameObject weaponObject = null;
 
     void Start()
     {
@@ -31,6 +32,8 @@ public class ThrowWeapons : MonoBehaviour
                 if(weapon.weaponName == weaponNameInput.text)
                 {
                     weaponToRemove = weapon;
+                    weaponObject.SetActive(true);
+                    weaponObject = GameObject.Find(weaponToRemove.weaponName);
                     break;
                 }
             }
@@ -39,7 +42,7 @@ public class ThrowWeapons : MonoBehaviour
             {
                 Vector3 weaponPos = playerPosition.PositionDroppedWeapon();
                 Instantiate(weaponToRemove, weaponPos, Quaternion.identity);
-
+                weaponObject.SetActive(false);
                 objectStorage.weaponsInStorage.Remove(weaponToRemove);
                 menuContainer.SetActive(false);
                 weaponSelectorCanvas.SetActive(false);
