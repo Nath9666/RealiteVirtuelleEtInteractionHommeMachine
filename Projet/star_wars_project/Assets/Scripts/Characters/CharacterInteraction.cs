@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class CharacterInteraction : MonoBehaviour
 {
+    [SerializeField] private GameObject menuContainer;
+
+    [SerializeField] private GameObject planetMenu;
+
     private void OnCollisionExit(Collision collision)
     {
         ExitCharacterCollisionArea(collision);
@@ -22,5 +26,27 @@ public class CharacterInteraction : MonoBehaviour
             }
         }
     }
+
+    void Update()
+    {
+        Vector3 rayOrigin = Camera.main.transform.position;
+        Vector3 rayDirection = Camera.main.transform.forward;
+
+        RaycastHit hit;
+        Debug.DrawRay(rayOrigin, rayDirection * 3, Color.red);
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, 3))
+        {
+            if (hit.collider.gameObject.tag == "SpaceShipController")
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    menuContainer.SetActive(true);
+                    planetMenu.SetActive(true);
+                }
+            }
+        }
+    }
+
+
 }
 

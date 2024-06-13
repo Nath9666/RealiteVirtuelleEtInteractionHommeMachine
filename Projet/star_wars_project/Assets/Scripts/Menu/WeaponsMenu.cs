@@ -13,6 +13,9 @@ public class WeaponsMenu : MonoBehaviour
     [SerializeField] private TMP_Text weaponNameInputOne;
     [SerializeField] private TMP_Text weaponNameInputTwo;
 
+    [SerializeField] private Image weaponImageOne;
+    [SerializeField] private Image weaponImageTwo;
+
     private ObjectStorage objectStorage;
 
     void Start()
@@ -37,6 +40,8 @@ public class WeaponsMenu : MonoBehaviour
             // Effacer le texte avant d'afficher les nouvelles informations
             weaponNameInputOne.text = "";
             weaponNameInputTwo.text = "";
+            weaponImageOne.sprite = null;
+            weaponImageTwo.sprite = null;
 
             int count = 0;
             foreach (Weapons obj in objectStorage.weaponsInStorage)
@@ -44,10 +49,13 @@ public class WeaponsMenu : MonoBehaviour
                 if (count == 0)
                 {
                     weaponNameInputOne.text = obj.weaponName;
+                    weaponImageOne.sprite = obj.weaponImage;
                 }
                 else if (count == 1)
                 {
                     weaponNameInputTwo.text = obj.weaponName;
+                    weaponImageTwo.sprite = obj.weaponImage;
+
                 }
                 count++;
             }
