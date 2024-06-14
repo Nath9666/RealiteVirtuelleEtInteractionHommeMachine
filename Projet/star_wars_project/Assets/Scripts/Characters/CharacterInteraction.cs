@@ -9,6 +9,15 @@ public class CharacterInteraction : MonoBehaviour
 
     [SerializeField] private GameObject planetMenu;
 
+    private PlayerController playerController;
+    private PlaneteMenu planeteMenu;
+
+    void Start()
+    {
+        planeteMenu = FindAnyObjectByType<PlaneteMenu>();
+        playerController = FindAnyObjectByType<PlayerController>();
+    }
+
     private void OnCollisionExit(Collision collision)
     {
         ExitCharacterCollisionArea(collision);
@@ -40,6 +49,8 @@ public class CharacterInteraction : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    planeteMenu.isPlanetSelectorOpen = true;
+                    playerController.isCameraLock = true;
                     menuContainer.SetActive(true);
                     planetMenu.SetActive(true);
                 }

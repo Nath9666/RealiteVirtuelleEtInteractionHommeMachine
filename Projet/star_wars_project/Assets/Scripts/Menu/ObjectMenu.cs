@@ -12,18 +12,19 @@ public class ObjectMenu : MonoBehaviour
     private bool menuActive = false;
     private PlayerController playerController;
     private ObjectStorage objectStorage;
-
+    private PlaneteMenu planeteMenu;
 
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
+        planeteMenu = FindAnyObjectByType<PlaneteMenu>();
         objectStorage = FindObjectOfType<ObjectStorage>();
         menuContainer.SetActive(false);
     }
 
     void Update()
     {   
-        if (Input.GetKeyDown(KeyCode.E) && !objectStorage.isWeaponSelectorOpen)
+        if (Input.GetKeyDown(KeyCode.E) && !objectStorage.isWeaponSelectorOpen && !planeteMenu.isPlanetSelectorOpen)
         {
             if (!menuActive)
             {
