@@ -10,13 +10,11 @@ public class ObjectMenu : MonoBehaviour
     [SerializeField] private GameObject weaponsCanvas;
 
     private bool menuActive = false;
-    private PlayerController playerController;
     private ObjectStorage objectStorage;
     private PlaneteMenu planeteMenu;
 
     void Start()
     {
-        playerController = FindObjectOfType<PlayerController>();
         planeteMenu = FindAnyObjectByType<PlaneteMenu>();
         objectStorage = FindObjectOfType<ObjectStorage>();
         menuContainer.SetActive(false);
@@ -39,7 +37,7 @@ public class ObjectMenu : MonoBehaviour
 
     void OpenMainMenu()
     {
-        playerController.isCameraLock = true;
+        PlayerController.instance.isCameraLock = true;
         menuContainer.SetActive(true);
         menuCanvas.SetActive(true);
         weaponsCanvas.SetActive(false);
@@ -48,7 +46,7 @@ public class ObjectMenu : MonoBehaviour
 
     void CloseAllMenus()
     {
-        playerController.isCameraLock = false;
+        PlayerController.instance.isCameraLock = false;
         menuContainer.SetActive(false);
         menuCanvas.SetActive(false);
         weaponsCanvas.SetActive(false);

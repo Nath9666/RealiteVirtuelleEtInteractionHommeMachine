@@ -5,4 +5,5 @@ using UnityEngine;
 public class PlaneteMenu : MonoBehaviour
 {
     public bool isPlanetSelectorOpen = false;
+    
 }

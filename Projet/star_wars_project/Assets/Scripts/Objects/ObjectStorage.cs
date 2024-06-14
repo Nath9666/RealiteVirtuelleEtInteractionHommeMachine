@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.IO;
 
 public class ObjectStorage : MonoBehaviour
 {
+    // public static ObjectStorage instance;
     public List<Weapons> weaponsInStorage = new List<Weapons>();
     [SerializeField] private GameObject menuContainer;
     [SerializeField] private GameObject weaponsMenu;
@@ -18,13 +20,22 @@ public class ObjectStorage : MonoBehaviour
     [SerializeField] private Image weaponImageTwo;
     [SerializeField] private Image weaponImageThree;
 
-    private PlayerController playerController;
     public bool isWeaponSelectorOpen = false;
 
-    void Start()
-    {
-        playerController = FindObjectOfType<PlayerController>();
-    }
+
+
+    // void Awake()
+    // {
+    //     if (instance == null)
+    //     {
+    //         instance = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     else
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     public void AddObjectToStorage(Weapons objet)
     {
@@ -34,7 +45,7 @@ public class ObjectStorage : MonoBehaviour
         }
         else
         {
-            playerController.isCameraLock = true;
+            PlayerController.instance.isCameraLock = true;
             isWeaponSelectorOpen = true;
 
             weaponsInStorage.Add(objet);

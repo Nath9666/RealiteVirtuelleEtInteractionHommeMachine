@@ -17,14 +17,23 @@ public class PlayerController : MonoBehaviour
 
     public bool isCameraLock;
 
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        characterController = GetComponent<CharacterController>(); 
+
+        if(instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerController dans la scene");
+            return;
+        }
+        instance = this;
+    }
+
     void Start()
     {
         isCameraLock = false;
-    }
-
-    public void Awake()
-    {
-        characterController = GetComponent<CharacterController>(); 
     }
 
     private void Update()

@@ -9,13 +9,11 @@ public class CloseMenu : MonoBehaviour
     [SerializeField] private GameObject menuToClose;
     [SerializeField] private GameObject menuContainer;
 
-    private PlayerController playerController;
     private PlaneteMenu planeteMenu;
 
     void Start()
     {
         planeteMenu = FindAnyObjectByType<PlaneteMenu>();
-        playerController = FindAnyObjectByType<PlayerController>();
     }
     void Update()
     {
@@ -25,7 +23,7 @@ public class CloseMenu : MonoBehaviour
     public void CloseMenuCanvas()
     {
         planeteMenu.isPlanetSelectorOpen = false;
-        playerController.isCameraLock = false;
+        PlayerController.instance.isCameraLock = false;
         menuContainer.SetActive(false);
         menuToClose.SetActive(false);
     }

@@ -20,14 +20,12 @@ public class ThrowWeapons : MonoBehaviour
     private PlayerPosition playerPosition;
     private Dictionary<string, GameObject> weaponDictionary;
 
-    private PlayerController playerController;
 
     void Start()
     {
         objectStorage = FindObjectOfType<ObjectStorage>();
         playerPosition = FindObjectOfType<PlayerPosition>();
         throwWeaponButton.onClick.AddListener(DropWeapon);
-        playerController = FindObjectOfType<PlayerController>();
 
         weaponDictionary = new Dictionary<string, GameObject>
         {
@@ -64,7 +62,7 @@ public class ThrowWeapons : MonoBehaviour
                 objectStorage.weaponsInStorage.Remove(weaponToRemove);
                 menuContainer.SetActive(false);
                 weaponSelectorCanvas.SetActive(false);
-                playerController.isCameraLock = false;
+                PlayerController.instance.isCameraLock = false;
                 objectStorage.isWeaponSelectorOpen = false;
                 Debug.Log(objectStorage.isWeaponSelectorOpen);
 

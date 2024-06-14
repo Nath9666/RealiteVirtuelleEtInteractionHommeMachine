@@ -1,54 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class InteractionPNJ : MonoBehaviour
 {
-    [SerializeField] private string characterMsg;
+    [SerializeField] private Dialog dialog;
+    [SerializeField] public GameObject dialogContainer;
+    public bool isInRange = false;
+    public static InteractionPNJ instance;
+
+    private void Awake()
+    {
+        if(instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de InteractionPNJ dans la scene");
+            return;
+        }
+        instance = this;
+    }
+
+    void Update()
+    {
+        if(isInRange && Input.GetKeyDown(KeyCode.F))
+        {
+            TriggerDialog();
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            CreateChatBubble(characterMsg);
+            isInRange = true;
         }
     }
 
-    public void CreateChatBubble(string characterMsg)
+    private void OnCollisionExit(Collision collision)
     {
-        GameObject canvasGO = new GameObject("Canvas");
-        canvasGO.tag = "CanvasPNJ";
-        Canvas canvas = canvasGO.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvasGO.AddComponent<CanvasScaler>();
-        canvasGO.AddComponent<GraphicRaycaster>();
-
-        GameObject panelGO = new GameObject("Panel");
-        panelGO.transform.SetParent(canvasGO.transform);
-        RectTransform panelRect = panelGO.AddComponent<RectTransform>();
-        panelRect.sizeDelta = new Vector2(500, 100);
-
-        panelRect.anchorMin = new Vector2(0.5f, 0); // Ancre minimum en bas de la page
-        panelRect.anchorMax = new Vector2(0.5f, 0); // Ancre maximum en bas de la page
-        panelRect.pivot = new Vector2(0.5f, 0); // Pivot au centre de la base du panneau
-        panelRect.anchoredPosition = new Vector2(0, 15); // Ajustez la position y si nécessaire
-
-        Image panelImage = panelGO.AddComponent<Image>();
-        panelImage.color = Color.white;
-
-        GameObject textGO = new GameObject("Text");
-        textGO.transform.SetParent(panelGO.transform);
-        RectTransform textRect = textGO.AddComponent<RectTransform>();
-        textRect.sizeDelta = new Vector2(500, 300);
-        textRect.anchoredPosition = Vector2.zero;
-
-        Text text = textGO.AddComponent<Text>();
-        text.text = characterMsg;
-        text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-        text.fontSize = 24;
-        text.color = Color.black;
-        text.alignment = TextAnchor.MiddleCenter;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isInRange = false;
+        }
     }
+
+    private void TriggerDialog()
+    {
+        dialogContainer.SetActive(true);
+        PlayerController.instance.isCameraLock = true;
+        DialogManager.instance.isDialogOpen = true;
+        DialogManager.instance.StartDialog(dialog);
+    }
+
 }
 
