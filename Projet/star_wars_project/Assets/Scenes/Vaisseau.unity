@@ -1472,8 +1472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5603d6f06b9d3458df1585c763f308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInput: {fileID: 1892907370}
-  textInput: {fileID: 388296190}
 --- !u!114 &448380608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3314,7 +3312,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ff88d473dea04e0449215bb12ac2a381, type: 2}
+  - {fileID: 2100000, guid: 755842b0adc3c4b4e94948801c65712b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3343,7 +3341,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898550643}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1774911502305191707, guid: ea02024b268a30949a429815d31041af, type: 3}
 --- !u!4 &898550647
 Transform:
   m_ObjectHideFlags: 0
@@ -3352,13 +3350,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898550643}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1055.0192, y: -550.3805, z: 18.745926}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0.59636444, y: 0.37993357, z: 0.37993348, w: 0.59636444}
+  m_LocalPosition: {x: -1055.0192, y: -550.6567, z: 19.021235}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 207240193}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 65.001}
 --- !u!54 &898550648
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4568,7 +4566,7 @@ Transform:
   m_GameObject: {fileID: 1262606820}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1044.8514, y: -550.7005, z: 13.778525}
+  m_LocalPosition: {x: -1045.217, y: -550.7005, z: 13.778525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
