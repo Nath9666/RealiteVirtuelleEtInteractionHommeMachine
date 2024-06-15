@@ -7,7 +7,7 @@ using System.IO;
 
 public class ObjectStorage : MonoBehaviour
 {
-    // public static ObjectStorage instance;
+    public static ObjectStorage instance;
     public List<Weapons> weaponsInStorage = new List<Weapons>();
     [SerializeField] private GameObject menuContainer;
     [SerializeField] private GameObject weaponsMenu;
@@ -24,18 +24,18 @@ public class ObjectStorage : MonoBehaviour
 
 
 
-    // void Awake()
-    // {
-    //     if (instance == null)
-    //     {
-    //         instance = this;
-    //         DontDestroyOnLoad(gameObject);
-    //     }
-    //     else
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void AddObjectToStorage(Weapons objet)
     {
