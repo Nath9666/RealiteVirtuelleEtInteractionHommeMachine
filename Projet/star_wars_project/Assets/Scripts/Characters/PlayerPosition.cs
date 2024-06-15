@@ -1,15 +1,22 @@
- using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerPosition : MonoBehaviour
 {
-    [SerializeField] private float dropDistance = 1f;
+    [SerializeField] private float dropDistance = 2f;
+    [SerializeField] private float holdDistance = 2f;
+    [SerializeField] private float holdOffset = 1.0f;
     [SerializeField] private float dropHeightOffset = 0.5f;
-    public Vector3 GetPlayerPosition()
+
+    public static PlayerPosition instance;
+
+    private void Awake()
     {
-        Vector3 playerPosition = transform.position;
-        return playerPosition;
+        if (instance != null)
+        {
+            Debug.Log("Il y a plus d'une instance PlayerPosition dans la scene");
+            return;
+        }
+        instance = this;
     }
 
     public Vector3 PositionDroppedWeapon()
@@ -27,4 +34,19 @@ public class PlayerPosition : MonoBehaviour
 
         return weaponPosition;
     }
+
+    public Vector3 PositionHoldWeapon()
+    {
+        Vector3 playerPos = transform.position;
+        Vector3 playerForward = transform.forward;
+        Vector3 playerRight = transform.right;
+
+        Vector3 offsetRight = playerRight * 0.5f;
+
+        Vector3 weaponHoldPos = playerPos + playerForward * holdDistance + offsetRight;
+
+        return weaponHoldPos;
+    }
+
+
 }
