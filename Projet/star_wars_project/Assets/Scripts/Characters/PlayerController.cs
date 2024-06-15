@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Look();
+        DisplayWeapon();
     }
 
     private void FixedUpdate()
@@ -100,4 +101,8 @@ public class PlayerController : MonoBehaviour
     public void LookPerformed(InputAction.CallbackContext _ctx) => lookInput = _ctx.ReadValue<Vector2>();
     public void JumpPerformed(InputAction.CallbackContext _ctx) => jumpPerformed = _ctx.performed;
 
+    public void DisplayWeapon()
+    {
+        Debug.Log(EquipWeapon.instance.weaponEquip);
+    }
 }
