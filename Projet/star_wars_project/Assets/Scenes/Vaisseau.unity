@@ -2339,7 +2339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &593170489
 Transform:
   m_ObjectHideFlags: 0
@@ -3084,7 +3084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &751208612
 Transform:
   m_ObjectHideFlags: 0
@@ -5655,7 +5655,7 @@ MonoBehaviour:
     sentences:
     - Coucou je suis un ami de Han Solo, mon nom est C3PO.
     - Et toi qui es tu ?
-  dialogContainer: {fileID: 0}
+  dialogContainer: {fileID: 1272371903}
   isInRange: 0
 --- !u!54 &1643108231
 Rigidbody:
