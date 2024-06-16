@@ -27,7 +27,7 @@ public class CharacterInteraction : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "SpaceShipController")
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     planeteMenu.isPlanetSelectorOpen = true;
                     PlayerController.instance.isCameraLock = true;

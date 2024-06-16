@@ -29,7 +29,7 @@ public class PickUpObject : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "PickUpObject")
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     Weapons weapon = hit.collider.gameObject.GetComponent<Weapons>();
                     if (weapon != null)
