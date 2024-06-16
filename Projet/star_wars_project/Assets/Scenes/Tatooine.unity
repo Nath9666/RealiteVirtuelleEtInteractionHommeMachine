@@ -1167,6 +1167,7 @@ MonoBehaviour:
   weaponName: Blaster
   weaponType: Arme a feu
   weaponImage: {fileID: 21300000, guid: 1a23a61a5d33c5d4f8d686b07e9e377b, type: 3}
+  isHold: 0
 --- !u!114 &460862287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1777,6 +1778,7 @@ MonoBehaviour:
   weaponName: Arbalete
   weaponType: Arc
   weaponImage: {fileID: 21300000, guid: 71f3e0c5b81342f42ac69afe13d02573, type: 3}
+  isHold: 0
 --- !u!114 &657209117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3100,6 +3102,7 @@ MonoBehaviour:
   weaponName: Sabre Laser
   weaponType: Epee
   weaponImage: {fileID: 21300000, guid: fbddb3f9966265243ad3e1792976623b, type: 3}
+  isHold: 0
 --- !u!114 &1036764503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6830,7 +6833,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
