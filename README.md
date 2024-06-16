@@ -8,6 +8,9 @@ L'objectif de ce projet est de créer un jeu video qui permet aux utilisateurs d
 
 Ce projet se situe à l'intersection de la culture et de l'éducation. Il permettra aux utilisateurs de se plonger dans l'univers de Star Wars, d'en apprendre davantage sur son histoire et sa culture, tout en s'amusant avec différentes interactions et activitées.
 
+## Controle
+
+
 ## Fonctionnalités et interactions
 
 L'application permettra aux utilisateurs de naviguer dans différents environnements de Star Wars, de sélectionner et d'interagir avec divers objets et personnages. Le jeu au complet ce fait au clavier et à la souris.
@@ -24,49 +27,55 @@ Le développement de l'application s'est fait en plusieurs étapes. Tout d'abord
 
 #### Vaisseau spatial
 
-- Explorer le vaisseau
-- Interagir avec les objets à l'intérieur du vaisseau
-- Utiliser le tableau de bord pour naviguer vers différentes planètes
+- [X] Explorer le vaisseau
+- [X] Interagir avec les objets à l'intérieur du vaisseau
+- [X] Utiliser le tableau de bord pour naviguer vers différentes planètes
+
+#### L'étoile noir
+
+- [X] Explorer l'étoile
+- [X] Discuter avec un clone
+- [X] Parler avec dark vador
 
 #### Planète Naboo
 
-- Explorer la planète
-- Visiter la ville de Theed
-- Rencontrer la reine Amidala
-- Participer à une course de vaisseaux spatiaux
-- Visite de la cité sous-marine d'Otoh Gunga et rencontre avec Jar Jar Binks
+- [ ] Explorer la planète
+- [ ] Visiter la ville de Theed
+- [ ] Rencontrer la reine Amidala
+- [ ] Participer à une course de vaisseaux spatiaux
+- [ ] Visite de la cité sous-marine d'Otoh Gunga et rencontre avec Jar Jar Binks
 
 #### Planète Tatooine
 
-- Explorer la planète
-- Interagir avec les habitants locaux
-- Participer à une course de pods
-- Visiter la maison de Luke Skywalker
+- [ ] Explorer la planète
+- [ ] Interagir avec les habitants locaux
+- [ ] Participer à une course de pods
+- [ ] Visiter la maison de Luke Skywalker
 
 #### Planète Hoth
 
-- Explorer la planète
-- Participer à une bataille de snowspeeder contre les marcheurs impériaux
-- Visiter la base Echo de la Rébellion
+- [ ] Explorer la planète
+- [ ] Participer à une bataille de snowspeeder contre les marcheurs impériaux
+- [ ] Visiter la base Echo de la Rébellion
 
 #### Planète Dagobah
 
-- Explorer la planète
-- Rencontrer Yoda
-- S'entraîner au combat au sabre laser et a la force
+- [ ] Explorer la planète
+- [ ] Rencontrer Yoda
+- [ ] S'entraîner au combat au sabre laser et a la force
 
 #### Planète Endor
 
-- Explorer la planète
-- Interagir avec les Ewoks
-- Participer à une bataille contre les forces impériales
+- [ ] Explorer la planète
+- [ ] Interagir avec les Ewoks
+- [ ] Participer à une bataille contre les forces impériales
 
 #### Planète Coruscant
 
-- Explorer la planète
-- Visiter le Sénat Galactique
-- Rencontrer Dark Sidus
-- Rencontrer C-3PO et R2-D2 et la princesse Leia
+- [ ] Explorer la planète
+- [ ] Visiter le Sénat Galactique
+- [ ] Rencontrer Dark Sidus
+- [X] Rencontrer C-3PO et R2-D2 et la princesse Leia
 
 ## Conclusion
 
