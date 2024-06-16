@@ -7,6 +7,7 @@ public class InteractionPNJ : MonoBehaviour
 {
     [SerializeField] private Dialog dialog;
     [SerializeField] public GameObject dialogContainer;
+    [SerializeField] public GameObject interactionContainer;
     public bool isInRange = false;
     public static InteractionPNJ instance;
 
@@ -32,6 +33,7 @@ public class InteractionPNJ : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            interactionContainer.SetActive(true);
             isInRange = true;
         }
     }
@@ -40,12 +42,14 @@ public class InteractionPNJ : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            interactionContainer.SetActive(false);
             isInRange = false;
         }
     }
 
     private void TriggerDialog()
     {
+        interactionContainer.SetActive(false);
         dialogContainer.SetActive(true);
         PlayerController.instance.isCameraLock = true;
         DialogManager.instance.isDialogOpen = true;
