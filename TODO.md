@@ -1,6 +1,5 @@
-- [ ] importer les model dans le projet unity
-- [ ] terminer la modelisation de C3PO
+- [X] importer les model dans le projet unity
+- [X] terminer la modelisation de C3PO
 - [ ] trouver un model d'arbalete
-- [ ] faire les dialogue
-
+- [ ] faire les dialogues
 - [ ] nettoyer le git pour que le prof puisse comprendre le truc
