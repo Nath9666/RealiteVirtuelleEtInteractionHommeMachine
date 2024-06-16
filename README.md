@@ -10,6 +10,16 @@ Ce projet se situe à l'intersection de la culture et de l'éducation. Il permet
 
 ## Controle
 
+F = interraction avec l'environnement (PNJ, arme a ramasser, sélection de la planete)
+E = ouverture du menu
+Clic gauche = Tir pistolet
+Z = avant
+Q = gauche
+S = arriere
+D = droite
+1 = Desequiper une arme
+2 = Equiper arme 1
+3 = Equiper arme 2
 
 ## Fonctionnalités et interactions
 
@@ -48,7 +58,7 @@ Le développement de l'application s'est fait en plusieurs étapes. Tout d'abord
 #### Planète Tatooine
 
 - [ ] Explorer la planète
-- [ ] Interagir avec les habitants locaux
+- [X] Interagir avec les habitants locaux
 - [ ] Participer à une course de pods
 - [ ] Visiter la maison de Luke Skywalker
 
