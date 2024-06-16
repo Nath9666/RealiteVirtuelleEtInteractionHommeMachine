@@ -2,3 +2,4 @@ Projet/Assets/assets/uploads_files_3150593_R2-D2.zip filter=lfs diff=lfs merge=l
 Projet/Assets/assets/uploads_files_3011198_at_st_2018.zip filter=lfs diff=lfs merge=lfs -text
 Projet/Assets/assets/uploads_files_3567674_SWBF2_FirstOrderStormtrooper(2).zip filter=lfs diff=lfs merge=lfs -text
 Projet/star_wars_project/APK/star_wars_project_Data/resources.assets.resS filter=lfs diff=lfs merge=lfs -text
+Projet/star_wars_project/APK/star_wars_project_Data/sharedassets0.assets.resS filter=lfs diff=lfs merge=lfs -text
