@@ -3500,10 +3500,21 @@ MonoBehaviour:
   dialog:
     namePNJ: R2D2
     sentences:
-    - "Bonjour, je m'appelle R2D2. Je suis un dro\xEFde."
-    - Comment vas tu ?
-    audioClips:
-    - {fileID: 8300000, guid: 097852bf9f6d0fc4997ea100e5f9b3ec, type: 3}
+    - "\"BIIIIP BIIIIP BOUP ! (Hello, mon ami !) Je suis R2-D2, un astrom\xE9cano
+      au service des h\xE9ros de la galaxie"
+    - " J'ai servi avec bravoure aux c\xF4t\xE9s d'Anakin Skywalker pendant les Guerres
+      des Clones, et plus tard, aux c\xF4t\xE9s de Luke Skywalker dans la lutte contre
+      l'Empire."
+    - "BIP BOUP BIP BIIIP ! (Tatooine a \xE9t\xE9 attaqu\xE9e par l'Empire !) Nous
+      devons agir rapidement pour prot\xE9ger cette plan\xE8te"
+    - "Prends tes armes et vas les combattre. Leur attaque est une menace pour la
+      libert\xE9 dans toute la galaxie."
+    - "BOUP BEEP BEEP BOUP BIP ! (Je te transmettrai les coordonn\xE9es des forces
+      imp\xE9riales.)"
+    - " Ensemble, nous pouvons repousser l'ennemi et assurer la s\xE9curit\xE9 de
+      Tatooine."
+    - "BIP BOUP BOP BOOP ! (Bonne chance, et que la Force soit avec toi !) R2-D2,
+      pr\xEAt pour la mission.\""
   dialogContainer: {fileID: 1272371903}
   isInRange: 0
 --- !u!1 &963194225
@@ -5941,9 +5952,20 @@ MonoBehaviour:
   dialog:
     namePNJ: C3PO
     sentences:
-    - Coucou je suis un ami de Han Solo, mon nom est C3PO.
-    - Et toi qui es tu ?
-    audioClips: []
+    - "Hello! I am C-3PO, human-cyborg relations. Je suis un dro\xEFde de protocole,
+      fluide in over six million forms of communicatio"
+    - "Created by Anakin Skywalker en 32 BBY, j'ai \xE9t\xE9 con\xE7u pour aider
+      with etiquette and translation. "
+    - J'ai servi dans plusieurs contextes, from la diplomatie to les guerres, always
+      ensuring smooth communication
+    - "epuis ma cr\xE9ation, j'ai assist\xE9 \xE0 de nombreux \xE9v\xE9nements historiques
+      importants"
+    - "Par exemple, during the Clone Wars, j'\xE9tais un assistant d\xE9vou\xE9 to
+      Padm\xE9 Amidala, et plus tard, j'ai aid\xE9 la R\xE9bellion dans leur lutte
+      contre l'Empire."
+    - "R2-D2, mon fid\xE8le compagnon, m'a toujours accompagn\xE9 dans ces aventures.\n"
+    - " Ensemble, we have navigated des batailles dangereuses, des missions secr\xE8tes,
+      et des moments de paix. Maintenant, R2-D2 a une mission \xE0 nous confier.\n"
   dialogContainer: {fileID: 1272371903}
   isInRange: 0
 --- !u!54 &1643108231
