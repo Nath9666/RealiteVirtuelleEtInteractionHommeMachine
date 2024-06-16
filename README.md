@@ -91,4 +91,4 @@ Le développement de l'application s'est fait en plusieurs étapes. Tout d'abord
 
 Ce projet permettra aux fans de Star Wars de vivre une expérience immersive dans l'univers de la saga, d'en apprendre davantage sur son histoire et sa culture, tout en s'amusant avec différentes interactions et activités. Il s'agit d'une application éducative et ludique qui permettra aux utilisateurs de découvrir ou redécouvrir l'univers de Star Wars de manière interactive et divertissante.
 
-Vous trouverez une petite video de présentation du projet sur le lien suivant : [Star Wars : Héritage et Légende](./video/)
+Vous trouverez une petite video de présentation du projet sur le lien suivant : [Star Wars : Héritage et Légende](./Video/video_project_star_wars.mp4)
