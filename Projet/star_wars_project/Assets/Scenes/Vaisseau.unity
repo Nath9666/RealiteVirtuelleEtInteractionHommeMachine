@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 562806664}
-  weaponContainer: {fileID: 0}
+  weaponContainer: {fileID: 1868996300}
   weaponEquip: {fileID: 0}
 --- !u!1001 &455783535
 PrefabInstance:
@@ -3501,6 +3501,9 @@ MonoBehaviour:
     namePNJ: R2D2
     sentences:
     - "Bonjour, je m'appelle R2D2. Je suis un dro\xEFde."
+    - Comment vas tu ?
+    audioClips:
+    - {fileID: 8300000, guid: 097852bf9f6d0fc4997ea100e5f9b3ec, type: 3}
   dialogContainer: {fileID: 1272371903}
   isInRange: 0
 --- !u!1 &963194225
@@ -5834,6 +5837,7 @@ MonoBehaviour:
     sentences:
     - Coucou je suis un ami de Han Solo, mon nom est C3PO.
     - Et toi qui es tu ?
+    audioClips: []
   dialogContainer: {fileID: 1272371903}
   isInRange: 0
 --- !u!54 &1643108231
@@ -6700,11 +6704,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69efda016ff2fdb468de477f96b9dc84, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.29883623
+      value: 0.29883623
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69efda016ff2fdb468de477f96b9dc84, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.29883623
+      value: 0.29883623
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69efda016ff2fdb468de477f96b9dc84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6712,7 +6716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69efda016ff2fdb468de477f96b9dc84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -50
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69efda016ff2fdb468de477f96b9dc84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
