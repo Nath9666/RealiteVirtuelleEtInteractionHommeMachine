@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 110
+  controlID: 56
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 146
+  controlID: 159
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 43
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 39
+  controlID: 44
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -461,23 +461,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7608ffffa408ffff1214ffffb615ffffba860000e887000096880000
+      m_SelectedIDs: b67b0000
+      m_LastClickedID: 31670
+      m_ExpandedIDs: f83affff565affffe8d4ffff20fbffff2259000064590000a4590000dc590000085a0000525a0000dc5a0000005b0000c07b0000f07b0000367c0000647c0000d27c0000027d00000e7d00001c7d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: darkvador
+        m_OriginalName: darkvador
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -72198
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -895,9 +895,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.6807143, y: 2.3752754, z: 1.7174251}
+    m_Target: {x: -8.937542, y: 1.7225938, z: 7.979283}
     speed: 2
-    m_Value: {x: -0.6807143, y: 2.3752754, z: 1.7174251}
+    m_Value: {x: -8.937542, y: 1.7225938, z: 7.979283}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -943,17 +943,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.030463303, y: -0.9630483, z: 0.123454556, w: 0.2375054}
+    m_Target: {x: 0.21606012, y: -0.32235882, z: 0.07576719, w: 0.9185516}
     speed: 2
-    m_Value: {x: 0.030092206, y: -0.96373737, z: 0.12354294, w: 0.23461054}
+    m_Value: {x: 0.21903579, y: -0.31936297, z: 0.07607442, w: 0.91882724}
   m_Size:
-    m_Target: 2.4671268
+    m_Target: 4.660475
     speed: 2
-    m_Value: 2.4671268
+    m_Value: 4.8800783
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1019,7 +1019,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/ImportMesh/R2D2/materail
+    - Assets/Resources/ImportMesh/lightsaber
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1027,16 +1027,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Resources/ImportMesh/R2D2/materail
+  - Assets/Resources/ImportMesh/lightsaber
   m_LastFoldersGridSize: 96
   m_LastProjectPath: E:\RealiteVirtuelleEtInteractionHommeMachine\Projet\star_wars_project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca930000
-    m_LastClickedID: 37834
-    m_ExpandedIDs: 00000000f80500005006000010890000b693000000ca9a3bffffff7f
+    m_SelectedIDs: ac6e0000
+    m_LastClickedID: 28332
+    m_ExpandedIDs: 00000000365c0000385c0000425c0000745c0000805c0000be61000032680000ac6e000052710000a47f0000ca8400009487000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1064,7 +1064,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000365c0000385c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
