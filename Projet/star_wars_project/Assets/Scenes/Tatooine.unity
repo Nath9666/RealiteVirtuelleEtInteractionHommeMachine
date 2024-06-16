@@ -2145,8 +2145,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    namePNJ: 
-    sentences: []
+    namePNJ: Clone
+    sentences:
+    - "\"J'ai \xE9t\xE9 recrut\xE9 sur ma plan\xE8te natale, Lothal, et j'ai subi
+      un entra\xEEnement intensif pour devenir un Stormtrooper de l'Empire. Cela
+      s'est pass\xE9 en 1 ABY, juste apr\xE8s la bataille de Yavin."
+    - "Avant de rejoindre les rangs de l'Empire, j'\xE9tais un simple fermier. Mais
+      lorsque l'Empire a pris le contr\xF4le de notre plan\xE8te en 5 BBY, j'ai \xE9t\xE9
+      forc\xE9 de m'enr\xF4ler."
+    - "Je suis n\xE9 dans les territoires de la Bordure Ext\xE9rieure, et \xE0 un
+      jeune \xE2ge, en 10 BBY, j'ai \xE9t\xE9 enr\xF4l\xE9 par l'Acad\xE9mie Imp\xE9riale
+      pour devenir un soldat d'\xE9lite"
+    - "Mon fr\xE8re a\xEEn\xE9 \xE9tait d\xE9j\xE0 un Stormtrooper, et j'ai suivi
+      ses traces, m'engageant dans l'arm\xE9e imp\xE9riale en 2 ABY, peu de temps
+      apr\xE8s la bataille de Yavin"
+    - "\"Les conditions de vie sur ma plan\xE8te \xE9taient difficiles, et rejoindre
+      les Stormtroopers en 7 BBY \xE9tait l'un des seuls moyens d'assurer la s\xE9curit\xE9
+      et la stabilit\xE9 pour ma famille"
+    - "Je fais partie du premier groupe de clones cr\xE9\xE9s sur Kamino, destin\xE9
+      \xE0 servir l'Empire sans questionner les ordres re\xE7us. J'ai \xE9t\xE9 d\xE9ploy\xE9
+      pour la premi\xE8re fois en 19 BBY, apr\xE8s l'Ordre 66."
+    - "Apr\xE8s la chute de la R\xE9publique et l'ascension de l'Empire en 19 BBY,
+      j'ai \xE9t\xE9 r\xE9affect\xE9 comme Stormtrooper pour maintenir l'ordre dans
+      la galaxie. J'ai servi jusqu'\xE0 la chute de l'Empire en 4 ABY, apr\xE8s la
+      bataille d'Endor"
   dialogContainer: {fileID: 0}
   isInRange: 0
 --- !u!54 &885087324
@@ -2195,7 +2217,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 1.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -2447,6 +2469,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c92edf922fbe859418a83eca84db5181, type: 3}
       propertyPath: m_Name
       value: clone
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748359892381204692, guid: c92edf922fbe859418a83eca84db5181, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748359892381204692, guid: c92edf922fbe859418a83eca84db5181, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4905,8 +4935,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    namePNJ: 
-    sentences: []
+    namePNJ: DarkVador
+    sentences:
+    - "Je suis n\xE9 sous le nom d'Anakin Skywalker en 41 BBY sur Tatooine. J'ai
+      \xE9t\xE9 d\xE9couvert par le ma\xEEtre Jedi Qui-Gon Jinn et form\xE9 par Obi-Wan
+      Kenobi."
+    - "\"J'ai combattu aux c\xF4t\xE9s des Jedi pendant la Guerre des Clones, mais
+      en 19 BBY, j'ai \xE9t\xE9 s\xE9duit par le c\xF4t\xE9 obscur de la Force et
+      je suis devenu Dark Vador, l'apprenti de l'Empereur Palpatine"
+    - "Ma transformation en Dark Vador a eu lieu apr\xE8s que j'ai \xE9t\xE9 gravement
+      bless\xE9 lors d'un duel contre Obi-Wan Kenobi sur Mustafar en 19 BBY. C'est
+      \xE0 ce moment-l\xE0 que j'ai endoss\xE9 l'armure noire embl\xE9matique."
+    - "Pendant des ann\xE9es, j'ai servi l'Empire, \xE9liminant les Jedi restants
+      et \xE9tendant l'emprise de l'Empereur sur la galaxie. Mais tout a chang\xE9
+      en 0 BBY avec la bataille de Yavin."
+    - "Lors de la bataille de Yavin, j'ai d\xE9couvert l'existence de mon fils, Luke
+      Skywalker, qui \xE9tait le pilote ayant d\xE9truit l'\xC9toile de la Mort."
+    - "Au d\xE9but, j'ai cherch\xE9 \xE0 convertir Luke au c\xF4t\xE9 obscur, mais
+      en 4 ABY, lors de la bataille d'Endor, il a r\xE9ussi \xE0 r\xE9veiller le
+      peu de bien qui restait en moi."
+    - "C'est gr\xE2ce \xE0 Luke que j'ai pu renoncer au c\xF4t\xE9 obscur et d\xE9truire
+      l'Empereur Palpatine, mettant ainsi fin \xE0 son r\xE8gne. Je suis mort peu
+      apr\xE8s, mais j'ai retrouv\xE9 la paix en redevenant Anakin Skywalker."
   dialogContainer: {fileID: 0}
   isInRange: 0
 --- !u!54 &1538557910
@@ -6329,15 +6379,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4539795
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9954834
+      value: -1.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.74147415
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_LocalRotation.w
