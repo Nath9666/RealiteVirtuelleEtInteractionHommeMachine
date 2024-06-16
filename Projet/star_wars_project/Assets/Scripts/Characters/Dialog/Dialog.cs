@@ -9,4 +9,5 @@ public class Dialog
 
     [TextArea(3, 10)]
     [SerializeField] public string[] sentences;
+    [SerializeField] public AudioClip[] audioClips;
 }

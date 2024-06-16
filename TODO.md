@@ -3,3 +3,4 @@
 - [ ] trouver un model d'arbalete
 - [ ] faire les dialogues
 - [ ] nettoyer le git pour que le prof puisse comprendre le truc
+- [ ] ajouter une animation sur la recuperation des armes
