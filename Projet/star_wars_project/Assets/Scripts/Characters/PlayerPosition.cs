@@ -41,12 +41,16 @@ public class PlayerPosition : MonoBehaviour
         Vector3 playerForward = transform.forward;
         Vector3 playerRight = transform.right;
 
+        float holdDistance = 1.0f;
+        float verticalOffset = 1.0f;
+
         Vector3 offsetRight = playerRight * 0.5f;
 
-        Vector3 weaponHoldPos = playerPos + playerForward * holdDistance + offsetRight;
+        Vector3 weaponHoldPos = playerPos + playerForward * holdDistance + offsetRight + Vector3.up * verticalOffset;
 
         return weaponHoldPos;
     }
+
 
 
 }
