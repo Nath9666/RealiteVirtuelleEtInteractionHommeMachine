@@ -8,4 +8,7 @@ public class Weapons : MonoBehaviour
     [SerializeField] public string weaponName;
     [SerializeField] public string weaponType;
     [SerializeField] public Sprite weaponImage;
+    [SerializeField] public bool isHold = false;
+
+    
 }

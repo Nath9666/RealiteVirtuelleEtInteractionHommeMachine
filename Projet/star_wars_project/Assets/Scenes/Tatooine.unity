@@ -505,6 +505,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215304199}
   m_CullTransparentMesh: 1
+--- !u!1 &262527127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 262527133}
+  - component: {fileID: 262527132}
+  - component: {fileID: 262527131}
+  - component: {fileID: 262527130}
+  - component: {fileID: 262527129}
+  - component: {fileID: 262527128}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &262527128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262527127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c799d8523c883c04292dece6895e5f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2145877288}
+  weaponContainer: {fileID: 0}
+  weaponEquip: {fileID: 0}
+--- !u!114 &262527129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262527127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2963d32cb26edbc4c9743de730e51604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameInput: {fileID: 1057808568}
+  dialogInput: {fileID: 1708621578}
+  isDialogOpen: 0
+--- !u!114 &262527130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262527127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5603d6f06b9d3458df1585c763f308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &262527131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262527127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e68e136ea089742a53f987675e5a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlanetSelectorOpen: 0
+--- !u!114 &262527132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262527127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34586471995c4df4bb47f4390901a5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponsInStorage: []
+  menuContainer: {fileID: 1555465520}
+  weaponsMenu: {fileID: 1105627337}
+  weaponNameInputOne: {fileID: 1100644674}
+  weaponNameInputTwo: {fileID: 863357704}
+  weaponNameInputThree: {fileID: 1124546530}
+  weaponImageOne: {fileID: 0}
+  weaponImageTwo: {fileID: 0}
+  weaponImageThree: {fileID: 0}
+  isWeaponSelectorOpen: 0
+--- !u!4 &262527133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262527127}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7499975, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &279561013
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +1056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 879a9a6e3e530b04ea47ced4b121778c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1054,6 +1167,7 @@ MonoBehaviour:
   weaponName: Blaster
   weaponType: Arme a feu
   weaponImage: {fileID: 21300000, guid: 1a23a61a5d33c5d4f8d686b07e9e377b, type: 3}
+  isHold: 0
 --- !u!114 &460862287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,6 +1443,7 @@ Transform:
   m_Children:
   - {fileID: 885087322}
   - {fileID: 1538557908}
+  - {fileID: 1469162010}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &561538285
@@ -1398,6 +1513,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8b6b92e5ad3a7ca4b863f240dfbff725, type: 3}
       propertyPath: m_Name
       value: lightsaber
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b6b92e5ad3a7ca4b863f240dfbff725, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1659,6 +1778,7 @@ MonoBehaviour:
   weaponName: Arbalete
   weaponType: Arc
   weaponImage: {fileID: 21300000, guid: 71f3e0c5b81342f42ac69afe13d02573, type: 3}
+  isHold: 0
 --- !u!114 &657209117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2232,7 +2352,7 @@ Transform:
   m_GameObject: {fileID: 885087321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1039.7, y: -550.3805, z: 9.43}
+  m_LocalPosition: {x: -1040.188, y: -550.3805, z: 9.242}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2254,28 +2374,28 @@ MonoBehaviour:
   dialog:
     namePNJ: Clone
     sentences:
-    - "\"J'ai \xE9t\xE9 recrut\xE9 sur ma plan\xE8te natale, Lothal, et j'ai subi
-      un entra\xEEnement intensif pour devenir un Stormtrooper de l'Empire. Cela
-      s'est pass\xE9 en 1 ABY, juste apr\xE8s la bataille de Yavin."
+    - "J'ai \xE9t\xE9 recrut\xE9 sur ma plan\xE8te natale, Lothal, et j'ai subi un
+      entra\xEEnement intensif pour devenir un Stormtrooper de l'Empire. Cela s'est
+      pass\xE9 en 1 ABY, juste apr\xE8s la bataille de Yavin."
     - "Avant de rejoindre les rangs de l'Empire, j'\xE9tais un simple fermier. Mais
       lorsque l'Empire a pris le contr\xF4le de notre plan\xE8te en 5 BBY, j'ai \xE9t\xE9
       forc\xE9 de m'enr\xF4ler."
     - "Je suis n\xE9 dans les territoires de la Bordure Ext\xE9rieure, et \xE0 un
       jeune \xE2ge, en 10 BBY, j'ai \xE9t\xE9 enr\xF4l\xE9 par l'Acad\xE9mie Imp\xE9riale
-      pour devenir un soldat d'\xE9lite"
+      pour devenir un soldat d'\xE9lite."
     - "Mon fr\xE8re a\xEEn\xE9 \xE9tait d\xE9j\xE0 un Stormtrooper, et j'ai suivi
       ses traces, m'engageant dans l'arm\xE9e imp\xE9riale en 2 ABY, peu de temps
-      apr\xE8s la bataille de Yavin"
-    - "\"Les conditions de vie sur ma plan\xE8te \xE9taient difficiles, et rejoindre
+      apr\xE8s la bataille de Yavin."
+    - "Les conditions de vie sur ma plan\xE8te \xE9taient difficiles, et rejoindre
       les Stormtroopers en 7 BBY \xE9tait l'un des seuls moyens d'assurer la s\xE9curit\xE9
-      et la stabilit\xE9 pour ma famille"
+      et la stabilit\xE9 pour ma famille."
     - "Je fais partie du premier groupe de clones cr\xE9\xE9s sur Kamino, destin\xE9
       \xE0 servir l'Empire sans questionner les ordres re\xE7us. J'ai \xE9t\xE9 d\xE9ploy\xE9
       pour la premi\xE8re fois en 19 BBY, apr\xE8s l'Ordre 66."
     - "Apr\xE8s la chute de la R\xE9publique et l'ascension de l'Empire en 19 BBY,
       j'ai \xE9t\xE9 r\xE9affect\xE9 comme Stormtrooper pour maintenir l'ordre dans
       la galaxie. J'ai servi jusqu'\xE0 la chute de l'Empire en 4 ABY, apr\xE8s la
-      bataille d'Endor"
+      bataille d'Endor."
     audioClips: []
   dialogContainer: {fileID: 1469162006}
   interactionContainer: {fileID: 306264946}
@@ -2537,7 +2657,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c92edf922fbe859418a83eca84db5181, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c92edf922fbe859418a83eca84db5181, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2545,7 +2665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c92edf922fbe859418a83eca84db5181, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c92edf922fbe859418a83eca84db5181, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2982,6 +3102,7 @@ MonoBehaviour:
   weaponName: Sabre Laser
   weaponType: Epee
   weaponImage: {fileID: 21300000, guid: fbddb3f9966265243ad3e1792976623b, type: 3}
+  isHold: 0
 --- !u!114 &1036764503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4780,7 +4901,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 262527129}
         m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
         m_MethodName: DisplayNextSentence
         m_Mode: 1
@@ -5261,7 +5382,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469162006}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20.238525}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5269,11 +5390,11 @@ RectTransform:
   - {fileID: 1057808567}
   - {fileID: 1708621577}
   - {fileID: 1317978329}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 529046660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1048.1885, y: 551.4505}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1513083651
@@ -5574,7 +5695,7 @@ Transform:
   m_GameObject: {fileID: 1538557907}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1041.0385, y: -550.3805, z: 27.97}
+  m_LocalPosition: {x: -1041.172, y: -550.406, z: 28.244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5599,9 +5720,9 @@ MonoBehaviour:
     - "Je suis n\xE9 sous le nom d'Anakin Skywalker en 41 BBY sur Tatooine. J'ai
       \xE9t\xE9 d\xE9couvert par le ma\xEEtre Jedi Qui-Gon Jinn et form\xE9 par Obi-Wan
       Kenobi."
-    - "\"J'ai combattu aux c\xF4t\xE9s des Jedi pendant la Guerre des Clones, mais
+    - "J'ai combattu aux c\xF4t\xE9s des Jedi pendant la Guerre des Clones, mais
       en 19 BBY, j'ai \xE9t\xE9 s\xE9duit par le c\xF4t\xE9 obscur de la Force et
-      je suis devenu Dark Vador, l'apprenti de l'Empereur Palpatine"
+      je suis devenu Dark Vador, l'apprenti de l'Empereur Palpatine."
     - "Ma transformation en Dark Vador a eu lieu apr\xE8s que j'ai \xE9t\xE9 gravement
       bless\xE9 lors d'un duel contre Obi-Wan Kenobi sur Mustafar en 19 BBY. C'est
       \xE0 ce moment-l\xE0 que j'ai endoss\xE9 l'armure noire embl\xE9matique."
@@ -7442,7 +7563,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7450,7 +7571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7483,6 +7604,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
       propertyPath: m_Name
       value: darkvador
+      objectReference: {fileID: 0}
+    - target: {fileID: 1617048992373897728, guid: f47e55c1b1ca0904e9f7be87553b0bb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7799,6 +7924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectDisplayer: {fileID: 1077324947}
   canvasObject: {fileID: 1044678520}
+  interactionContainer: {fileID: 306264946}
   weaponsStorage: {fileID: 1789886881}
 --- !u!143 &2145877292
 CharacterController:
@@ -7873,7 +7999,7 @@ SceneRoots:
   - {fileID: 1529816078}
   - {fileID: 1789886882}
   - {fileID: 529046660}
-  - {fileID: 1469162010}
   - {fileID: 279561017}
   - {fileID: 1428771615}
   - {fileID: 306264947}
+  - {fileID: 262527133}

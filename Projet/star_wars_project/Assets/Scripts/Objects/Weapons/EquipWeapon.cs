@@ -53,6 +53,7 @@ public class EquipWeapon : MonoBehaviour
     {
         if(weaponEquip != null)
         {
+            weaponEquip.isHold = true;
             weaponEquip.transform.parent = player.transform;
             weaponEquip.transform.position = PlayerPosition.instance.PositionHoldWeapon(); // Utiliser la position de dépose définie par PlayerPosition
             weaponEquip.gameObject.SetActive(true);

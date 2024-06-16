@@ -8,6 +8,8 @@ public class PickUpObject : MonoBehaviour
 {
     [SerializeField] private TMP_Text objectDisplayer;
     [SerializeField] private GameObject canvasObject;
+    [SerializeField] public GameObject interactionContainer;
+
     public ObjectStorage weaponsStorage;
     private float displayTime = 2f; // Temps d'affichage du canvas en secondes
 
@@ -29,17 +31,24 @@ public class PickUpObject : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "PickUpObject")
             {
+                interactionContainer.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    interactionContainer.SetActive(false);
                     Weapons weapon = hit.collider.gameObject.GetComponent<Weapons>();
                     if (weapon != null)
                     {
                         weaponsStorage.AddObjectToStorage(weapon);
                         DisplayObjectName(weapon);
+                        
                         hit.collider.gameObject.SetActive(false);
                     }
                 }
             }
+        }
+        else
+        {
+           interactionContainer.SetActive(false); 
         }
     }
 
