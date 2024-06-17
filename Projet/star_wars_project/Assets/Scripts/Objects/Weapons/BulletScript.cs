@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float bulletLifeTime = 3;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Destroy(this.gameObject, bulletLifeTime);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Destroy(collision.gameObject);
+        Destroy(this.gameObject);
     }
 }
