@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4440218, g: 0.4931646, b: 0.5722313, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3420,7 +3420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &751208612
 Transform:
   m_ObjectHideFlags: 0
@@ -7241,7 +7241,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1293528534}
   bulletSpawn: {fileID: 1253134022}
   bulletSpeed: 20
-  fireRate: 0.5
+  fireRate: 0.25
 --- !u!1 &1868996300
 GameObject:
   m_ObjectHideFlags: 0
