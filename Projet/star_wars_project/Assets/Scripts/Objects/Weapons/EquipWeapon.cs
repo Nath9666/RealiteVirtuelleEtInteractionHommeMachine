@@ -47,6 +47,7 @@ public class EquipWeapon : MonoBehaviour
         }
     }
 
+    
     public void HoldWeaponPosition()
     {
         if (weaponEquip != null)
