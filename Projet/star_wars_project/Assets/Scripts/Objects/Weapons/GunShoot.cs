@@ -8,9 +8,19 @@ public class GunShoot : MonoBehaviour
     public Transform bulletSpawn;
     public float bulletSpeed = 20;
     public float fireRate = 0.5f;
-    // public AudioClip shootSound;
+    public AudioClip shootSound;
 
     private float nextFireTime = 0f;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource component missing from this game object. Please add an AudioSource component.");
+        }
+    }
 
     void Update()
     {
@@ -26,11 +36,22 @@ public class GunShoot : MonoBehaviour
         var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bulletSpawn.forward * bulletSpeed;
 
-        // Jouer le son de tir
-        // if (shootSound != null && audioSource != null)
-        // {
-        //     audioSource.PlayOneShot(shootSound);
-        // }
+        if (shootSound != null && audioSource != null)
+        {
+            Debug.Log("Playing shoot sound");
+            audioSource.PlayOneShot(shootSound);
+        }
+        else
+        {
+            if (shootSound == null)
+            {
+                Debug.LogError("shootSound is not assigned. Please assign an AudioClip.");
+            }
+            if (audioSource == null)
+            {
+                Debug.LogError("AudioSource component is missing. Please add an AudioSource component.");
+            }
+        }
 
         // Debug Log for checking direction
         Debug.Log("Bullet direction: " + bulletSpawn.forward);
