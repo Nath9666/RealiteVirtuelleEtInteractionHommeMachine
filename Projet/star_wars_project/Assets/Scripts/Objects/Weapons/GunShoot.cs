@@ -38,7 +38,6 @@ public class GunShoot : MonoBehaviour
 
         if (shootSound != null && audioSource != null)
         {
-            Debug.Log("Playing shoot sound");
             audioSource.PlayOneShot(shootSound);
         }
         else
@@ -52,9 +51,7 @@ public class GunShoot : MonoBehaviour
                 Debug.LogError("AudioSource component is missing. Please add an AudioSource component.");
             }
         }
-
-        Debug.Log("Bullet direction: " + bulletSpawn.forward);
-    }
+   }
 
 
     void OnDrawGizmos()

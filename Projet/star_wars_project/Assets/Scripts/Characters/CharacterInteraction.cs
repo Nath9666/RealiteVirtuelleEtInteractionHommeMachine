@@ -35,6 +35,15 @@ public class CharacterInteraction : MonoBehaviour
                     planetMenu.SetActive(true);
                 }
             }
+
+            if (hit.collider.gameObject.tag == "ShootGame")
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Debug.Log("Shoot game will start");
+                    Target.instance.target.SetActive(true);
+                }
+            }
         }
     }
 
