@@ -53,11 +53,10 @@ public class GunShoot : MonoBehaviour
             }
         }
 
-        // Debug Log for checking direction
         Debug.Log("Bullet direction: " + bulletSpawn.forward);
     }
 
-    // Draw a ray in the Scene view to visualize bullet direction
+
     void OnDrawGizmos()
     {
         if (bulletSpawn != null)
