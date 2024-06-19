@@ -17,7 +17,6 @@ public class ShootTraining : MonoBehaviour
     
     public static ShootTraining instance;
     private bool isInShootArea = false;
-    private bool isGameStarted = false;
 
     void Awake()
     {
@@ -46,7 +45,7 @@ public class ShootTraining : MonoBehaviour
         rules.SetActive(false);
         timer.SetActive(true);
         pointContainer.SetActive(true);
-        isGameStarted = true;
+        Target.instance.isStart = true;
     }
 
     void OnTriggerExit(Collider other)
@@ -72,7 +71,6 @@ public class ShootTraining : MonoBehaviour
 
         if(Target.instance.isHit == true)
         {
-            Target.instance.gamePoint += 1;
             gamePointInput.text = "Points : " + Target.instance.gamePoint;
 
             Target.instance.target.SetActive(false);

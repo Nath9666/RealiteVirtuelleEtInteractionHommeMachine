@@ -6,10 +6,10 @@ public class Target : MonoBehaviour
 {
     [SerializeField] public float targetLife = 2f; 
     [SerializeField] public GameObject target; 
-    [SerializeField] public bool isHit = true;
+    [SerializeField] public bool isHit = false;
     [SerializeField] public bool noMoreTargetLife = false;
     [SerializeField] public float gamePoint = 0;
-    [SerializeField] private bool isStart = false;
+    [SerializeField] public bool isStart = false;
 
     public static Target instance;
 
@@ -25,12 +25,16 @@ public class Target : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Bullet"))
+        if(isStart)
         {
-            isStart = true;
-            gamePoint += 1;
-            isHit = true;
+            if(collision.gameObject.CompareTag("Bullet"))
+            {
+                isStart = true;
+                gamePoint += 1;
+                isHit = true;
+            }
         }
+
     }
 
     void Update()
