@@ -8,7 +8,7 @@ public class Target : MonoBehaviour
     [SerializeField] public GameObject target; 
     [SerializeField] public bool isHit = true;
     [SerializeField] public bool noMoreTargetLife = false;
-    [SerializeField] private float gamePoint = 0;
+    [SerializeField] public float gamePoint = 0;
     [SerializeField] private bool isStart = false;
 
     public static Target instance;
