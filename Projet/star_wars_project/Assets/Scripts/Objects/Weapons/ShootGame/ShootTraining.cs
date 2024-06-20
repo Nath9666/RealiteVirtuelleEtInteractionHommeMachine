@@ -71,12 +71,14 @@ public class ShootTraining : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.F))
             {
+                PlayerController.instance.isCameraLock = true;
                 rules.SetActive(true);
             }
         }
 
         if(Target.instance.isStart)
         {
+            PlayerController.instance.isCameraLock = false;
             UpdateTimer();
         }
 
@@ -109,6 +111,7 @@ public class ShootTraining : MonoBehaviour
         }
         else
         {
+            PlayerController.instance.isCameraLock = true;
             timer.SetActive(false);
             pointContainer.SetActive(false);
             resultContainer.SetActive(true);
